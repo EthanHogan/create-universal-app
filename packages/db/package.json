@@ -15,13 +15,17 @@
     "with-env": "dotenv -e ../../.env --",
     "dev": "yarn with-env prisma studio --port 5556 --browser=none",
     "db-push": "yarn with-env prisma db push",
-    "db-generate": "yarn with-env prisma generate"
+    "db-generate": "yarn with-env prisma generate",
+    "db:generate": "drizzle-kit generate:pg --config=drizzle.config.ts"
   },
   "dependencies": {
-    "@prisma/client": "latest"
+    "@prisma/client": "latest",
+    "drizzle-orm": "0.26.5",
+    "postgres": "^3.3.5"
   },
   "devDependencies": {
     "dotenv-cli": "^6.0.0",
+    "drizzle-kit": "0.18.1",
     "prisma": "latest",
     "typescript": "4.9.4"
   }

@@ -1,0 +1,135 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "6a900ed3-8cf6-4255-b7ca-4cb113524851",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "entry": {
+      "name": "entry",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "entry_day": {
+          "name": "entry_day",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "url_front_photo_thumbnail": {
+          "name": "url_front_photo_thumbnail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "url_front_photo_hd": {
+          "name": "url_front_photo_hd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "url_back_photo_thumbnail": {
+          "name": "url_back_photo_thumbnail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "url_back_photo_hd": {
+          "name": "url_back_photo_hd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "entry_user_id_user_id_fk": {
+          "name": "entry_user_id_user_id_fk",
+          "tableFrom": "entry",
+          "tableTo": "user",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {}
+    },
+    "user": {
+      "name": "user",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
