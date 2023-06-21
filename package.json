@@ -19,15 +19,15 @@
     "clean:workspaces": "turbo clean ; rm -rf .yarn/cache .yarn/install-state.gz",
     "db-push": "turbo db-push",
     "postinstall": "yarn build:ui && yarn generate",
-    "generate": "cd packages/db && yarn db:generate",
-    "introspect": "cd packages/db && yarn db:introspect",
+    "generate": "cd packages/db && yarn db-generate",
+    "introspect": "cd packages/db && yarn db-introspect",
     "build:ui": "cd packages/ui && yarn build",
     "build-desktop": "turbo run build:tauri --filter nextjs",
     "studio": " cd packages/db && yarn prisma:studio",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },
   "resolutions": {
-    "esbuild": "0.15.5",
+    "esbuild": "0.18.5",
     "@types/react": "17.0.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
