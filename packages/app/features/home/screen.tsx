@@ -69,7 +69,7 @@ export function HomeScreen() {
         </Paragraph>
         <Paragraph ta="center">
           This template uses Expo, Next, Solito, tRPC, Tamagui, Clerk, and
-          Drizzle. If you're a beginner and is a little overwhelmed, I've also
+          Drizzle. If you're a beginner and you are a little overwhelmed, I've also
           made a{" "}
           <Anchor
             color="$color12"
