@@ -1974,6 +1974,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild-kit/core-utils@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "@esbuild-kit/core-utils@npm:3.1.0"
+  dependencies:
+    esbuild: ~0.17.6
+    source-map-support: ^0.5.21
+  checksum: d54fd5adb3ce6784d84bb025ad54ddcfbab99267071a7f65298e547f56696f0b9d0dba96c535f9678a30d4887ec71cd445fdd277d65fbec1f3b504f6808f693e
+  languageName: node
+  linkType: hard
+
+"@esbuild-kit/esm-loader@npm:^2.5.5":
+  version: 2.5.5
+  resolution: "@esbuild-kit/esm-loader@npm:2.5.5"
+  dependencies:
+    "@esbuild-kit/core-utils": ^3.0.0
+    get-tsconfig: ^4.4.0
+  checksum: 9d4a03ffc937fbec75a8456c3d45d7cdb1a65768416791a5720081753502bc9f485ba27942a46f564b12483b140a8a46c12433a4496430d93e4513e430484ec7
+  languageName: node
+  linkType: hard
+
 "@esbuild/android-arm64@npm:0.18.5":
   version: 0.18.5
   resolution: "@esbuild/android-arm64@npm:0.18.5"
@@ -2988,8 +3008,8 @@ __metadata:
   dependencies:
     "@prisma/client": latest
     dotenv-cli: ^6.0.0
-    drizzle-kit: 0.18.1
-    drizzle-orm: 0.26.5
+    drizzle-kit: 0.19.2
+    drizzle-orm: 0.27.0
     postgres: ^3.3.5
     prisma: latest
     typescript: 4.9.4
@@ -7961,14 +7981,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:0.18.1":
-  version: 0.18.1
-  resolution: "drizzle-kit@npm:0.18.1"
+"drizzle-kit@npm:0.19.2":
+  version: 0.19.2
+  resolution: "drizzle-kit@npm:0.19.2"
   dependencies:
+    "@esbuild-kit/esm-loader": ^2.5.5
     camelcase: ^7.0.1
     chalk: ^5.2.0
     commander: ^9.4.1
-    esbuild: ^0.15.18
+    esbuild: ^0.18.6
     esbuild-register: ^3.4.2
     glob: ^8.1.0
     hanji: ^0.0.5
@@ -7976,14 +7997,14 @@ __metadata:
     minimatch: ^7.4.3
     zod: ^3.20.2
   bin:
-    drizzle-kit: index.js
-  checksum: be65b073d00f293e7c278f125d0303eb88d45127c1f99a9b2ff6aaf5b0209db1d54625e4d4db69243f6196d92a84414bd7f39c1dc3b83ecd4e5edd3858e9e46a
+    drizzle-kit: index.cjs
+  checksum: a7cc7bafd5c3330b8e94555d82f2ff809d63fdc33cde8a6e7d8843073f8cb69588c4f9900ec3fde7ebcb79d8b3aed566bbd862065f09367418653ca5c606c3bf
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:0.26.5":
-  version: 0.26.5
-  resolution: "drizzle-orm@npm:0.26.5"
+"drizzle-orm@npm:0.27.0":
+  version: 0.27.0
+  resolution: "drizzle-orm@npm:0.27.0"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=3"
@@ -8043,7 +8064,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 84b53de7841e51a1580dfcda152b621aaf8908446e7a81eba3998d05e111f803ff221d3a683d11dd30c685f16ccad3222849b8e439b2b0b288dc374f7479b9de
+  checksum: 4d2f98993f1d7d26e05bcdb5266bf50e3718c6dca953be4e39195231dc0922ce31588f161057ab8a760912e8ae89fadc1eb8ef30cb315ca4327f09d62b52d562
   languageName: node
   linkType: hard
 
@@ -15755,7 +15776,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.16, source-map-support@npm:~0.5.20":
+"source-map-support@npm:^0.5.16, source-map-support@npm:^0.5.21, source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:

@@ -20,12 +20,12 @@
   },
   "dependencies": {
     "@prisma/client": "latest",
-    "drizzle-orm": "0.26.5",
+    "drizzle-orm": "0.27.0",
     "postgres": "^3.3.5"
   },
   "devDependencies": {
     "dotenv-cli": "^6.0.0",
-    "drizzle-kit": "0.18.1",
+    "drizzle-kit": "0.19.2",
     "prisma": "latest",
     "typescript": "4.9.4"
   }
